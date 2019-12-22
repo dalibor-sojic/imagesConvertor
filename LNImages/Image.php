@@ -77,7 +77,8 @@ class Image {
 		$params[] = '-vf scale=' . $this->_size->width . ':' . $this->_size->height;
 		$params[] = $this->targetFile;
 
-		exec($cmd . join(' ', $params));
+		shell_exec($cmd . join(' ', $params));
+
 
 	}
 
@@ -92,8 +93,6 @@ class Image {
 		$this->ext		= $pi['extension'];
 		$this->filename	= $pi['filename'];
 		unset($pi);
-
-		print_r($this);
 
 		$this->_size = new StdClass();
 		$this->_parseSize()

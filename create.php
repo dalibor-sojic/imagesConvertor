@@ -1,5 +1,4 @@
 <?php
-include('LNImages/ImageSource.php');
 include('LNImages/Image.php');
 
 
@@ -10,5 +9,3 @@ $image->setSourceDir('./sources');
 $image->setTargetDir('./cdn');
 
 $image->create($requestedImage);
-
-
