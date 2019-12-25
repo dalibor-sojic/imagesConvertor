@@ -59,12 +59,16 @@ class Image {
 		return $this;
 	}
 
-	public function _prepareTarget() {
+	public function createTargetDir() {
 		$target = realpath($this->_targetDir) . DIRECTORY_SEPARATOR . $this->dirname;
 		if (!is_dir($target)) {
-			echo "Create Dir " . $target;
 			mkdir($target, 0755, true);
 		}
+
+	}
+
+	public function _prepareTarget() {
+		$this->createTargetDir();
 		$this->targetFile = realpath($target) . DIRECTORY_SEPARATOR . $this->filename . '.' . $this->ext;
 		return $this;
 	}
