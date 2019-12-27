@@ -78,7 +78,7 @@ class Image {
 
 		$cmd = '/usr/bin/ffmpeg ';
 		$params[] = '-i ' . $this->_sourceFile;
-		$params[] = '-vf scale=' . $this->_size->width . ':' . $this->_size->height;
+		$params[] = '-lossless -vf scale=' . $this->_size->width . ':' . $this->_size->height;
 		$params[] = $this->targetFile;
 
 		shell_exec($cmd . join(' ', $params));
