@@ -83,7 +83,7 @@ class Image {
 		$params[] = '-vf scale=' . $this->_size->width . ':' . $this->_size->height;
 		$params[] = $this->targetFile;
 
-		echo($cmd . join(' ', $params));
+		shell_exec($cmd . join(' ', $params));
 
 
 	}
