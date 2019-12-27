@@ -9,4 +9,4 @@ $image->create($_GET['file']);
 
 exec('/usr/bin/php /home/console/nextcloud/occ files:scan amazingradios > /dev/null &');
 
-// header('Location: ' . $_GET['file']);
+header('Location: ' . $_GET['file']);
