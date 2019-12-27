@@ -69,7 +69,7 @@ class Image {
 
 	public function _prepareTarget() {
 		$this->createTargetDir();
-		$this->targetFile = realpath($target) . DIRECTORY_SEPARATOR . $this->filename . '.' . $this->ext;
+		$this->targetFile = realpath($this->_targetDir) . DIRECTORY_SEPARATOR . $this->filename . '.' . $this->ext;
 		return $this;
 	}
 
