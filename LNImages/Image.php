@@ -78,10 +78,12 @@ class Image {
 
 		$cmd = '/usr/bin/ffmpeg ';
 		$params[] = '-i ' . $this->_sourceFile;
-		$params[] = ' -lossless 1 -compression_level 0 -vf scale=' . $this->_size->width . ':' . $this->_size->height;
+		$params[] = '-lossless 1';
+		$params[] = '-compression_level 0';
+		$params[] = '-vf scale=' . $this->_size->width . ':' . $this->_size->height;
 		$params[] = $this->targetFile;
 
-		shell_exec($cmd . join(' ', $params));
+		echo($cmd . join(' ', $params));
 
 
 	}
