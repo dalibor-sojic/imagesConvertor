@@ -64,7 +64,7 @@ class Image {
 		if (!is_dir($target)) {
 			mkdir($target, 0755, true);
 		}
-
+		$this->_targetDir .= DIRECTORY_SEPARATOR . $this->dirname;
 	}
 
 	public function _prepareTarget() {
