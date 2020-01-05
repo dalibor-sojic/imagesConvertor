@@ -49,6 +49,7 @@ class Image {
 
 		$this->_sourceFile = preg_replace('/-w(\d+)/', '', $this->_sourceFile);
 		$this->_sourceFile = preg_replace('/-h(\d+)/', '', $this->_sourceFile);
+		$this->_sourceFile = preg_replace('/-l(\d+)/', '', $this->_sourceFile);
 
 		// Original, source, path, without extension
 
