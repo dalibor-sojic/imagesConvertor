@@ -38,7 +38,7 @@ class Image {
 		$this->_size->height = (isset($r[1])) ? $r[1] : -1;
 
 		preg_match('/-l([0,1])/', $this->filename, $r);
-		$this->_lossy = (isset($r[1])) ? $r[1] : 1;
+		$this->lossy = (isset($r[1])) ? $r[1] : 1;
 
 		return $this;
 	}
@@ -82,7 +82,7 @@ class Image {
 
 		$cmd = '/usr/bin/ffmpeg ';
 		$params[] = '-i ' . $this->_sourceFile;
-		if ($this->_lossy == 1){
+		if ($this->lossy == 1){
 			$params[] = '-lossless 0';
 		}
 		else {
