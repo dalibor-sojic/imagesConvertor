@@ -9,10 +9,10 @@ $image->setSourceDir('/home/console/files/amazingradios/files/cdnsources/');
 $image->setTargetDir('/home/console/files/amazingradios/files/cdn/');
 
 $image->lossy = 1;
-$image->create('tmp1');
+$image->create('/tmp1');
 
 $image->lossy = 0;
-$image->create('tmp2');
+$image->create('/tmp2');
 
 $compared = new CompareImages('tmp1', 'tmp2');
 
