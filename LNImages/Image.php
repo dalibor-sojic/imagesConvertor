@@ -90,7 +90,7 @@ class Image {
 		}
 		$params[] = '-compression_level 0';
 		$params[] = '-vf scale=' . $this->_size->width . ':' . $this->_size->height;
-		$params[] = $this->targetFile . $this->lossy;
+		$params[] = $this->lossy . $this->targetFile;
 
 		shell_exec($cmd . join(' ', $params));
 
