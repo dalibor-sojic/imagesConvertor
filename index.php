@@ -19,6 +19,6 @@ $image->create($requestedFile);
 // echo $compared;
 
 
-exec('/usr/bin/php /home/console/nextcloud/occ files:scan amazingradios > /dev/null &');
+#exec('/usr/bin/php /home/console/nextcloud/occ files:scan amazingradios > /dev/null &');
 
 header('Location: ' . $requestedFile);

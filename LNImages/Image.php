@@ -50,6 +50,7 @@ class Image {
 		$this->_sourceFile = preg_replace('/-w(\d+)/', '', $this->_sourceFile);
 		$this->_sourceFile = preg_replace('/-h(\d+)/', '', $this->_sourceFile);
 		$this->_sourceFile = preg_replace('/-l(\d+)/', '', $this->_sourceFile);
+		$this->_sourceFile = str_replace('.img', '', $this->_sourceFile);
 
 		// Original, source, path, without extension
 
@@ -105,7 +106,7 @@ class Image {
 
 		$this->dirname	= $pi['dirname'];
 		$this->basename	= $pi['basename'];
-		$this->ext		= $pi['extension'];
+		$this->ext	= $pi['extension'];
 		$this->filename	= $pi['filename'];
 		unset($pi);
 
