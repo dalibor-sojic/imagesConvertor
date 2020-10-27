@@ -5,11 +5,17 @@ include('LNImages/CompareImages.php');
 $requestedFile = (isset($_GET['file'])) ? $_GET['file'] : $argv[1];
 
 $image = new Image();
-$image->setSourceDir('/home/console/files/amazingradios/files/cdnsources/');
-$image->setTargetDir('/home/console/files/amazingradios/files/cdn/');
+$image->setSourceDir('/home/rtk/Documents/Projects');
+$image->setTargetDir('/home/rtk/Desktop/');
 
 $image->lossy = 1;
-$image->create($requestedFile);
+
+try {
+    $image->create($requestedFile);
+}
+catch (SourceNotFoundException $ex) {
+    echo $ex->getError();
+}
 
 // $image->lossy = 0;
 // $image->create($requestedFile);
