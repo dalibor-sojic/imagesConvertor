@@ -14,7 +14,9 @@ class Image {
 	private $_allowedExt = [
 		'webp',
 		'png',
-		'jpg'
+		'jpg',
+		'jp2',
+		'ico'
 	];
 
 
